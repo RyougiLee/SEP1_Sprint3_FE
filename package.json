@@ -43,7 +43,9 @@
     "vite": "^5.4.21"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.37.1",
     "@tailwindcss/vite": "^4.1.18",
+    "axios": "^1.13.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "electron-squirrel-startup": "^1.0.1",

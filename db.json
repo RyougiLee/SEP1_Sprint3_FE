@@ -1,158 +1,97 @@
 {
   "users": [
-    {
-      "id": 1,
-      "role": "teacher",
-      "username": "prof_jones",
-      "full_name": "Dr. Alice M. Jones",
-      "email": "alice.jones@university.edu",
-      "created_at": "2026-02-24T10:00:00Z"
-    },
-    {
-      "id": 2,
-      "role": "teacher",
-      "username": "prof_smith",
-      "full_name": "Dr. Bob Smith",
-      "email": "bob.smith@university.edu",
-      "created_at": "2026-02-24T10:05:00Z"
-    },
-    {
-      "id": 3,
-      "role": "student",
-      "username": "jdoe",
-      "full_name": "John Doe",
-      "email": "john.doe.new@student.edu",
-      "created_at": "2026-02-24T10:10:00Z"
-    },
-    {
-      "id": 4,
-      "role": "student",
-      "username": "mgarcia",
-      "full_name": "Maria Garcia",
-      "email": "mgarcia@student.edu",
-      "created_at": "2026-02-24T10:15:00Z"
-    },
-    {
-      "id": 5,
-      "role": "student",
-      "username": "tnguyen",
-      "full_name": "Trang Nguyen",
-      "email": "tnguyen@student.edu",
-      "created_at": "2026-02-24T10:20:00Z"
-    }
+    { "id": 1, "role": "teacher", "username": "teacher1", "password_hash": "hashed_pw", "full_name": "Professor A", "email": "prof.1@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
+    { "id": 2, "role": "teacher", "username": "teacher2", "password_hash": "hashed_pw", "full_name": "Professor B", "email": "prof.2@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
+    { "id": 3, "role": "teacher", "username": "teacher3", "password_hash": "hashed_pw", "full_name": "Professor C", "email": "prof.3@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
+    { "id": 4, "role": "student", "username": "student1", "password_hash": "hashed_pw", "full_name": "Student 1", "email": "s1@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 5, "role": "student", "username": "student2", "password_hash": "hashed_pw", "full_name": "Student 2", "email": "s2@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 6, "role": "student", "username": "student3", "password_hash": "hashed_pw", "full_name": "Student 3", "email": "s3@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 7, "role": "student", "username": "student4", "password_hash": "hashed_pw", "full_name": "Student 4", "email": "s4@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 8, "role": "student", "username": "student5", "password_hash": "hashed_pw", "full_name": "Student 5", "email": "s5@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 9, "role": "student", "username": "student6", "password_hash": "hashed_pw", "full_name": "Student 6", "email": "s6@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 10, "role": "student", "username": "student7", "password_hash": "hashed_pw", "full_name": "Student 7", "email": "s7@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 11, "role": "student", "username": "student8", "password_hash": "hashed_pw", "full_name": "Student 8", "email": "s8@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
+    { "id": 12, "role": "student", "username": "student9", "password_hash": "hashed_pw", "full_name": "Student 9", "email": "s9@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" }
   ],
   "courses": [
-    {
-      "id": 1,
-      "course_name": "Introduction to Database Systems",
-      "course_code": "CS301",
-      "is_archived": false,
-      "created_by": 1,
-      "created_at": "2026-02-24T11:00:00Z"
-    },
-    {
-      "id": 2,
-      "course_name": "Web Development",
-      "course_code": "CS302",
-      "is_archived": true,
-      "created_by": 1,
-      "created_at": "2026-02-24T11:05:00Z"
-    },
-    {
-      "id": 3,
-      "course_name": "Data Structures",
-      "course_code": "CS201",
-      "is_archived": false,
-      "created_by": 2,
-      "created_at": "2026-02-24T11:10:00Z"
-    }
+    { "id": 1, "course_name": "Database Systems", "course_code": "CS150", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
+    { "id": 2, "course_name": "Web Development", "course_code": "CS200", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
+    { "id": 3, "course_name": "Data Structures", "course_code": "CS250", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
+    { "id": 4, "course_name": "Algorithm Design", "course_code": "CS300", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
+    { "id": 5, "course_name": "Machine Learning", "course_code": "CS350", "is_archived": false, "created_by": 2, "created_at": "2023-02-01T10:00:00Z" }
   ],
   "course_enrollments": [
     { "id": 1, "course_id": 1, "user_id": 1, "role": "teacher" },
-    { "id": 2, "course_id": 1, "user_id": 3, "role": "student" },
+    { "id": 2, "course_id": 1, "user_id": 9, "role": "student" },
     { "id": 3, "course_id": 1, "user_id": 4, "role": "student" },
-    { "id": 4, "course_id": 3, "user_id": 2, "role": "teacher" },
-    { "id": 5, "course_id": 3, "user_id": 5, "role": "student" }
+    { "id": 4, "course_id": 1, "user_id": 10, "role": "student" },
+    { "id": 5, "course_id": 2, "user_id": 1, "role": "teacher" },
+    { "id": 6, "course_id": 2, "user_id": 4, "role": "student" },
+    { "id": 7, "course_id": 2, "user_id": 10, "role": "student" },
+    { "id": 8, "course_id": 2, "user_id": 11, "role": "student" },
+    { "id": 9, "course_id": 2, "user_id": 8, "role": "student" },
+    { "id": 10, "course_id": 3, "user_id": 1, "role": "teacher" },
+    { "id": 11, "course_id": 3, "user_id": 9, "role": "student" },
+    { "id": 12, "course_id": 3, "user_id": 11, "role": "student" },
+    { "id": 13, "course_id": 3, "user_id": 5, "role": "student" },
+    { "id": 14, "course_id": 4, "user_id": 1, "role": "teacher" },
+    { "id": 15, "course_id": 4, "user_id": 10, "role": "student" },
+    { "id": 16, "course_id": 4, "user_id": 11, "role": "student" },
+    { "id": 17, "course_id": 4, "user_id": 7, "role": "student" },
+    { "id": 18, "course_id": 5, "user_id": 2, "role": "teacher" },
+    { "id": 19, "course_id": 5, "user_id": 7, "role": "student" },
+    { "id": 20, "course_id": 5, "user_id": 10, "role": "student" },
+    { "id": 21, "course_id": 5, "user_id": 9, "role": "student" },
+    { "id": 22, "course_id": 5, "user_id": 8, "role": "student" }
   ],
   "assignments": [
-    {
-      "id": 2,
-      "course_id": 1,
-      "created_by": 1,
-      "title": "SQL Queries Homework",
-      "description": "Write advanced SELECT, JOIN, subquery, and CTE exercises.",
-      "due_date": "2025-03-22T23:59:59Z",
-      "status": "published",
-      "allowed_file_types": ".sql,.txt",
-      "max_file_size_mb": 8.00
-    },
-    {
-      "id": 3,
-      "course_id": 1,
-      "created_by": 1,
-      "title": "Normalization Quiz",
-      "description": "Quiz on 1NF through BCNF.",
-      "due_date": "2025-04-01T23:59:59Z",
-      "status": "published",
-      "allowed_file_types": null,
-      "max_file_size_mb": null
-    },
-    {
-      "id": 4,
-      "course_id": 3,
-      "created_by": 2,
-      "title": "Binary Tree Implementation",
-      "description": "Implement a BST in Java or Python.",
-      "due_date": "2025-03-20T23:59:59Z",
-      "status": "published",
-      "allowed_file_types": ".java,.py,.zip",
-      "max_file_size_mb": 20.00
-    }
+    { "id": 1, "course_id": 1, "created_by": 1, "title": "Database Systems Assignment 1", "description": "Detailed description for Database Systems task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 2, "course_id": 1, "created_by": 1, "title": "Database Systems Assignment 2", "description": "Detailed description for Database Systems task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 3, "course_id": 2, "created_by": 1, "title": "Web Development Assignment 1", "description": "Detailed description for Web Development task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 4, "course_id": 2, "created_by": 1, "title": "Web Development Assignment 2", "description": "Detailed description for Web Development task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 5, "course_id": 3, "created_by": 1, "title": "Data Structures Assignment 1", "description": "Detailed description for Data Structures task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 6, "course_id": 3, "created_by": 1, "title": "Data Structures Assignment 2", "description": "Detailed description for Data Structures task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 7, "course_id": 4, "created_by": 1, "title": "Algorithm Design Assignment 1", "description": "Detailed description for Algorithm Design task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 8, "course_id": 4, "created_by": 1, "title": "Algorithm Design Assignment 2", "description": "Detailed description for Algorithm Design task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 9, "course_id": 5, "created_by": 2, "title": "Machine Learning Assignment 1", "description": "Detailed description for Machine Learning task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
+    { "id": 10, "course_id": 5, "created_by": 2, "title": "Machine Learning Assignment 2", "description": "Detailed description for Machine Learning task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 }
   ],
   "submissions": [
-    {
-      "id": 3,
-      "assignment_id": 2,
-      "student_id": 3,
-      "status": "submitted",
-      "submitted_at": "2026-02-24T15:00:00Z"
-    },
-    {
-      "id": 4,
-      "assignment_id": 4,
-      "student_id": 5,
-      "status": "submitted",
-      "submitted_at": "2026-02-24T15:30:00Z"
-    }
+    { "id": 1, "assignment_id": 1, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-24T15:55:12Z" },
+    { "id": 2, "assignment_id": 1, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T07:55:12Z" },
+    { "id": 3, "assignment_id": 2, "student_id": 4, "status": "submitted", "submitted_at": "2026-02-24T11:55:12Z" },
+    { "id": 7, "assignment_id": 4, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-25T03:55:12Z" },
+    { "id": 8, "assignment_id": 4, "student_id": 4, "status": "submitted", "submitted_at": "2026-02-24T06:55:12Z" },
+    { "id": 9, "assignment_id": 5, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T17:55:12Z" },
+    { "id": 10, "assignment_id": 5, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-23T21:55:12Z" },
+    { "id": 11, "assignment_id": 5, "student_id": 5, "status": "submitted", "submitted_at": "2026-02-25T00:55:12Z" },
+    { "id": 12, "assignment_id": 6, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-24T12:55:12Z" },
+    { "id": 14, "assignment_id": 7, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-25T15:55:12Z" },
+    { "id": 15, "assignment_id": 7, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-25T16:55:12Z" },
+    { "id": 17, "assignment_id": 8, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-25T11:55:12Z" },
+    { "id": 18, "assignment_id": 9, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-24T12:55:12Z" },
+    { "id": 19, "assignment_id": 9, "student_id": 8, "status": "submitted", "submitted_at": "2026-02-25T16:55:12Z" },
+    { "id": 20, "assignment_id": 9, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-24T03:55:12Z" },
+    { "id": 21, "assignment_id": 10, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T09:55:12Z" },
+    { "id": 22, "assignment_id": 10, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-25T03:55:12Z" },
+    { "id": 23, "assignment_id": 10, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-24T00:55:12Z" }
   ],
   "submission_files": [
-    {
-      "id": 3,
-      "submission_id": 3,
-      "file_name": "queries_jdoe.sql",
-      "stored_path": "/uploads/2025/03/queries_jdoe.sql",
-      "file_type": ".sql",
-      "file_size_bytes": 4096,
-      "uploaded_at": "2026-02-24T15:00:00Z"
-    },
-    {
-      "id": 4,
-      "submission_id": 4,
-      "file_name": "bst_tnguyen.zip",
-      "stored_path": "/uploads/2025/03/bst_tnguyen.zip",
-      "file_type": ".zip",
-      "file_size_bytes": 10240000,
-      "uploaded_at": "2026-02-24T15:30:00Z"
-    }
+    { "id": 1, "submission_id": 1, "file_name": "submission_1_user_10.zip", "stored_path": "/uploads/assign_1/sub_1.zip", "file_type": ".zip", "file_size_bytes": 4139029, "uploaded_at": "2026-02-24T15:55:12Z" },
+    { "id": 2, "submission_id": 2, "file_name": "submission_2_user_9.zip", "stored_path": "/uploads/assign_1/sub_2.zip", "file_type": ".zip", "file_size_bytes": 3296723, "uploaded_at": "2026-02-25T07:55:12Z" },
+    { "id": 3, "submission_id": 3, "file_name": "submission_3_user_4.zip", "stored_path": "/uploads/assign_2/sub_3.zip", "file_type": ".zip", "file_size_bytes": 3295333, "uploaded_at": "2026-02-24T11:55:12Z" },
+    { "id": 4, "submission_id": 7, "file_name": "submission_7_user_10.zip", "stored_path": "/uploads/assign_4/sub_7.zip", "file_type": ".zip", "file_size_bytes": 4405825, "uploaded_at": "2026-02-25T03:55:12Z" },
+    { "id": 5, "submission_id": 8, "file_name": "submission_8_user_4.zip", "stored_path": "/uploads/assign_4/sub_8.zip", "file_type": ".zip", "file_size_bytes": 1491272, "uploaded_at": "2026-02-24T06:55:12Z" },
+    { "id": 6, "submission_id": 9, "file_name": "submission_9_user_9.zip", "stored_path": "/uploads/assign_5/sub_9.zip", "file_type": ".zip", "file_size_bytes": 3140672, "uploaded_at": "2026-02-25T17:55:12Z" },
+    { "id": 7, "submission_id": 10, "file_name": "submission_10_user_11.zip", "stored_path": "/uploads/assign_5/sub_10.zip", "file_type": ".zip", "file_size_bytes": 2309901, "uploaded_at": "2026-02-23T21:55:12Z" },
+    { "id": 8, "submission_id": 11, "file_name": "submission_11_user_5.zip", "stored_path": "/uploads/assign_5/sub_11.zip", "file_type": ".zip", "file_size_bytes": 2861700, "uploaded_at": "2026-02-25T00:55:12Z" },
+    { "id": 16, "submission_id": 21, "file_name": "submission_21_user_9.zip", "stored_path": "/uploads/assign_10/sub_21.zip", "file_type": ".zip", "file_size_bytes": 2216889, "uploaded_at": "2026-02-25T09:55:12Z" }
   ],
   "grades": [
-    {
-      "id": 3,
-      "submission_id": 4,
-      "graded_by": 2,
-      "score": 95.00,
-      "comments": "Clean implementation with excellent test coverage.",
-      "graded_at": "2026-02-24T16:00:00Z"
-    }
+    { "id": 1, "submission_id": 1, "graded_by": 1, "score": 93.45, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
+    { "id": 2, "submission_id": 2, "graded_by": 1, "score": 94.97, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
+    { "id": 3, "submission_id": 3, "graded_by": 1, "score": 80.72, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
+    { "id": 4, "submission_id": 8, "graded_by": 1, "score": 99.38, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
+    { "id": 13, "submission_id": 21, "graded_by": 2, "score": 91.3, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" }
   ]
 }
