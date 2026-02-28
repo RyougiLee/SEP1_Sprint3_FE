@@ -11,7 +11,11 @@ export interface User {
 }
 
 export const UserApi = {
-  getDetail: (id: number) => apiClient.get<Partial<User>>(`/users/${id}`),
+  getDetail: (id: number) => apiClient.get<Partial<User>>(`/users`, {
+  params:{
+    id: id
+  }
+}),
   modify: (id: number, data:Partial<User>) => apiClient.patch<User>(`/users/${id}`,{data}),
 
 }

@@ -120,7 +120,7 @@ const data = {
 
 export function RootSidebar() {
 
-  const {navWorkspaces, isLoading} = useSidebarData();
+  const {navWorkspaces, navUser, isLoading} = useSidebarData();
   return(
       <Sidebar className="min-h-10">
         <SidebarHeader className="mt-[24px]">
@@ -143,7 +143,7 @@ export function RootSidebar() {
           <NavSecondary items={data.navSecondary} className="mt-auto" />
         </SidebarContent>
         <SidebarFooter>
-          <NavUser user={data.user} />
+          <NavUser user={navUser} isLoading={isLoading}/>
         </SidebarFooter>
       </Sidebar>
   )
