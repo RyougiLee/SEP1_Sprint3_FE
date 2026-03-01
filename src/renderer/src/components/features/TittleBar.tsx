@@ -3,11 +3,12 @@ import React from "react";
 import {Button} from "@/components/ui/button";
 import {ArrowLeftIcon} from "lucide-react";
 import { ButtonGroup } from "../ui/button-group";
-import {useTitle} from "../../../context/TitleContext";
+import {useTitleStore} from "@/store";
 
 export function TitleBar(){
 
-  const { title } = useTitle();
+  // const { title } = useTitle();
+  const title = useTitleStore((state)=>state.title)
   return(
       <div>
         <div className="h-[64px] px-[20px] w-full flex items-center">

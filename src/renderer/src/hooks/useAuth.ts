@@ -6,6 +6,6 @@ export const useAuth = () => {
   return {
     user,
     isAuthenticated: !!user,
-    userId: user?.id || 3
+    userId: user?.id
   };
 };

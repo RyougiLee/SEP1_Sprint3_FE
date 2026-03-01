@@ -18,6 +18,4 @@ export interface Assignment {
 export const AssignmentsApi = {
   getDetail: (id: number) => apiClient.get<Partial<User>>(`/users/${id}`),
   modify: (id: number, data:Partial<User>) => apiClient.patch<User>(`/users/${id}`,{data}),
-
-
 }

@@ -1,4 +1,5 @@
 import apiClient from "@/utils/api/client";
+import {Assignment} from "@/utils/api";
 
 interface CourseQueryParams{
   _page?: number;
@@ -23,9 +24,11 @@ export const CourseAPI = {
   listMyEnrolled: (userId: number) =>
       apiClient.get(`/enrollments/user/${userId}`),
 
-  getDetail: (id: number)=> apiClient.get<Course>(`/courses/${id}`),
+  getDetail: (id: string)=> apiClient.get<Course>(`/courses/${id}`),
 
   create: (data: Partial<Course>)=> apiClient.post<Course>('/courses',data),
 
-  modify: (id: number, data:Partial<Course>) => apiClient.patch<Course>(`/courses/${id}`,data)
+  modify: (id: string, data:Partial<Course>) => apiClient.patch<Course>(`/courses/${id}`,data),
+
+  getAssignments: (id: string) => apiClient.get<Assignment>(`/assignments?courseId=${id}`),
 }

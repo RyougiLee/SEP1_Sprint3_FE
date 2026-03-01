@@ -25,13 +25,13 @@ export function NavMain({items,}: {
         <SidebarGroupContent className="flex flex-col gap-2">
           <SidebarMenu>
             {items.map((item) => (
-                <a href={item.url}>
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton tooltip={item.title}>
-                    {item.icon && <item.icon />}
-                    <span>{item.title}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
+                <a href={item.url} key={item.title}>
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton tooltip={item.title}>
+                      {item.icon && <item.icon />}
+                      <span>{item.title}</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
                 </a>
             ))}
           </SidebarMenu>
