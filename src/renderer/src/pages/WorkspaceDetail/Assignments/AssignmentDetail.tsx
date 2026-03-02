@@ -21,7 +21,7 @@ export function AssignmentDetail() {
   const user = useUserStore((state) => state.user);
 
   // API Hooks
-  const { data: assignment, isLoading: isLoadingAssignment } = useGetAssignmentDetail(assignmentId!);
+  const { data: assignment, isLoading: isLoadingAssignment } : {data: any, isLoading: any} = useGetAssignmentDetail(assignmentId!);
   const { mutateAsync: getSubmission } = useStudentGetSubmission();
   const { mutateAsync: createDraft } = useCreateSubmissionDraft();
   const { mutateAsync: updateDescription } = useUpdateSubmission();
