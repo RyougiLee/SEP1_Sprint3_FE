@@ -8,12 +8,12 @@ import {useGetCoursesCreated} from "@/hooks/useGetCoursesCreated";
 export function useSidebarData() {
   const {user} = useAuth();
   const userDetail = useUserStore(state => state.user)
-  const{ data: courses, isLoading : coursesLoading} = useMyCourses(user?.id);
-  // @ts-ignore
+  const{ data: courses, isLoading : coursesLoading} : {data: any, isLoading: boolean} = useMyCourses(user?.id);
+
   const navWorkspaces = (courses || []).map((course: { courseName: any; courseId: any; }) => ({
 
     name: course.courseName,
-    url: `/#/workspaces/${course.courseId}`,
+    url: `/workspaces/${course.courseId}`,
     icon: IconDatabase,
   }));
 
@@ -23,12 +23,12 @@ export function useSidebarData() {
     avatar: "https://i.scdn.co/image/ab67616d0000b273b652c92353719de32c85480e",
   }
 
-  const{ data: coursesCreated, isLoading : coursesCreatedLoading} = useGetCoursesCreated(user?.id);
-  // @ts-ignore
+  const{ data: coursesCreated, isLoading : coursesCreatedLoading} : {data: any, isLoading: boolean} = useGetCoursesCreated(user?.id);
+
   const navWorkspacesCreated = (coursesCreated || []).map((course: { name: any; id: any; }) => ({
 
     name: course.name,
-    url: `/#/workspaces/${course.id}`,
+    url: `/workspaces/${course.id}`,
     icon: IconDatabase,
   }));
 

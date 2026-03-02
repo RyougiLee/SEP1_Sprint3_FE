@@ -362,7 +362,7 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
         await updateDescription({ submissionId, discription: description });
       }
 
-      await submitDraft(assignmentId);
+      await submitDraft(submissionId);
       setStatus("SUBMITTED");
       toast.success("Assignment submitted successfully!");
       loadSubmissionData();

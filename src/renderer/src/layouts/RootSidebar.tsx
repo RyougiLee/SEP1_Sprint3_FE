@@ -35,6 +35,7 @@ import {useSidebarData} from "@/hooks/useSidebarData";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {useUserStore} from "@/store";
+import {Link} from "react-router-dom";
 
 const data = {
   user: {
@@ -45,77 +46,29 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/",
       icon: IconDashboard,
     },
     {
       title: "Workspaces",
-      url: "/#/workspaces",
+      url: "/workspaces",
       icon: IconListDetails,
     },
     {
       title: "Calendar",
-      url: "/#/calendar",
+      url: "/calendar",
       icon: IconChartBar,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
     },
   ],
   navSecondary: [
     {
       title: "Settings",
-      url: "/#/settings",
+      url: "/settings",
       icon: IconSettings,
     },
     {
       title: "About",
-      url: "/#/about",
+      url: "/about",
       icon: IconHelp,
     },
   ],
@@ -136,9 +89,9 @@ export function RootSidebar() {
                   asChild
                   className="data-[slot=sidebar-menu-button]:!p-1.5"
               >
-                <a href="#">
+                <Link to="/">
                   <span className="text-base font-semibold">SEP1 Project</span>
-                </a>
+                </Link>
               </SidebarMenuButton>
               <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300">
                 {userDetail?.role === "STUDENT"?"Student":"Teacher"}

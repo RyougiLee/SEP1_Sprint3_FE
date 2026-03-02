@@ -3,7 +3,7 @@ import {SubmissionApi} from "@/utils/api/modules/submission";
 
 export const useSubmitSubmissionDraft = () => {
   return useMutation({
-    mutationFn: async (assignmentId: string) => await SubmissionApi.submitDraft(assignmentId),
+    mutationFn: async (submissionId: string) => await SubmissionApi.submitDraft(submissionId),
     onSuccess: (res:any) => {
       console.log("Submit submission success")
     },

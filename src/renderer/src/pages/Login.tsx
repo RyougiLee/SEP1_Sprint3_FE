@@ -4,6 +4,7 @@ import {LoginForm} from "@/components/features/LoginForm";
 import {getImage} from "@/utils/service/getImage";
 import {Outlet} from "react-router-dom";
 import {Toaster} from "sonner";
+import logoUrl from '@/assets/images/login-page-background-wallpaper.jpg'
 
 const Login = () => {
   return (
@@ -29,7 +30,7 @@ const Login = () => {
           </div>
           <div className="bg-muted relative hidden lg:block">
             <img
-                src = {getImage("login-page-background-wallpaper.jpg")}
+                src = {logoUrl}
                 alt="Image"
                 className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />

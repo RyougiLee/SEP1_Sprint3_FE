@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import React from "react"
-import {Link} from "lucide-react";
+import { Link } from "react-router-dom"
 
 export function NavMain({items,}: {
   items: {
@@ -25,14 +25,14 @@ export function NavMain({items,}: {
         <SidebarGroupContent className="flex flex-col gap-2">
           <SidebarMenu>
             {items.map((item) => (
-                <a href={item.url} key={item.title}>
+                <Link to={item.url} key={item.title}>
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton tooltip={item.title}>
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
-                </a>
+                </Link>
             ))}
           </SidebarMenu>
         </SidebarGroupContent>
