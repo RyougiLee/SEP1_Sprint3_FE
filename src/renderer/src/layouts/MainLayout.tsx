@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import {RootSidebar} from "@/layouts/RootSidebar";
 import {TitleBar} from "@/components/features/TittleBar";
+import {Toaster} from "sonner";
 
 const MainLayout = () =>{
   return(
@@ -15,6 +16,7 @@ const MainLayout = () =>{
             </SidebarProvider>
           </div>
           <div className="w-full">
+            <Toaster />
             <TitleBar/>
             <Outlet/>
           </div>

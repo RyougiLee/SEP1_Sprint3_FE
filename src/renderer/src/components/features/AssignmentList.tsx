@@ -1,20 +1,11 @@
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import {useGetCourseDetails} from "@/hooks/useGetCourseDetails";
-import {useGetAssignmentsInCourse} from "@/hooks/useGetAssignmentsInCourse";
 import {Badge} from "@/components/ui/badge";
 
-export function AssignmentList() {
-
+export function AssignmentList({assignments}:{assignments:any}) {
   const { courseId } = useParams()
-  const {data:assignments, isLoading} : { data: any, isLoading: boolean } = useGetAssignmentsInCourse(courseId);
   const navigate = useNavigate()
-
-  if (isLoading){
-    return <div>Loading</div>
-  }
-
   return(
       <div>
         <Table className="mt-[20px]">
