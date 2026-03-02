@@ -20,5 +20,7 @@ export const AssignmentsApi = {
   modify: (id: string, data:Partial<Assignment>) => apiClient.put<Partial<Assignment>>(`/assignments/${id}`,data),
   create: (data:Partial<Assignment>)=> apiClient.post<Partial<Assignment>>('assignments',data),
   publish: (id: string) => apiClient.put(`/assignments/${id}/publish`),
-  delete: (id: string)=> apiClient.delete(`assignments/${id}`),
+  delete: (id: string)=> apiClient.delete(`/assignments/${id}`),
+  getAll: () => apiClient.get("/assignments/student"),
+  getUrgent: () => apiClient.get("/assignments/student/urgent")
 }

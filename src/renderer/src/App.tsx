@@ -15,6 +15,10 @@ import {SignupForm} from "@/components/features/SignupForm";
 import {WorkspaceList} from "@/pages/WorkspaceList";
 import {AssignmentListPage} from "@/pages/WorkspaceDetail/Assignments/AssignmentListPage";
 import {CourseManagementPage} from "@/pages/WorkspaceDetail/Management";
+import Calendar from "@/pages/Calendar";
+import About from "@/pages/About";
+import Settings from "@/pages/Settings";
+import { ThemeProvider } from "./components/features/ThemeProvider";
 
 const App = () => {
 
@@ -35,29 +39,34 @@ const App = () => {
   }
 
   return(
-    <HashRouter>
-      <Routes>
-        {/*<Route path="/login" element={<Login/>} />*/}
-        <Route path="/login" element={<Login/>}>
-          <Route index element={<LoginForm/>}/>
-          <Route path="signup" element={<SignupForm/>}/>
-        </Route>
+    <ThemeProvider>
+      <HashRouter>
+        <Routes>
+          {/*<Route path="/login" element={<Login/>} />*/}
+          <Route path="/login" element={<Login/>}>
+            <Route index element={<LoginForm/>}/>
+            <Route path="signup" element={<SignupForm/>}/>
+          </Route>
 
-        <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<MainLayout/>}>
-            <Route index element={<Home/>} />
-            <Route path="/workspaces" element={<WorkspaceList />} />
-            <Route path="/workspaces/:courseId" element={<WorkspaceLayout />}>
-              <Route index element={<WorkspaceOverview />} />
-              <Route path="assignments" element={<AssignmentListPage />} />
-              <Route path="management" element={<CourseManagementPage />} />
-              {/*<Route path="members" element={<MemberList />} />*/}
-              <Route path="assignments/:assignmentId" element={<AssignmentDetail />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" element={<MainLayout/>}>
+              <Route index element={<Home/>} />
+              <Route path="/workspaces" element={<WorkspaceList />} />
+              <Route path="/calendar" element={<Calendar/>} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/workspaces/:courseId" element={<WorkspaceLayout />}>
+                <Route index element={<WorkspaceOverview />} />
+                <Route path="assignments" element={<AssignmentListPage />} />
+                <Route path="management" element={<CourseManagementPage />} />
+                {/*<Route path="members" element={<MemberList />} />*/}
+                <Route path="assignments/:assignmentId" element={<AssignmentDetail />} />
+              </Route>
             </Route>
           </Route>
-        </Route>
-      </Routes>
-    </HashRouter>
+        </Routes>
+      </HashRouter>
+    </ThemeProvider>
   )
 }
 

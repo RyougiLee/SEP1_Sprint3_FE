@@ -55,7 +55,7 @@ const data = {
     },
     {
       title: "Calendar",
-      url: "#",
+      url: "/#/calendar",
       icon: IconChartBar,
     },
   ],
@@ -110,12 +110,12 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/#/settings",
       icon: IconSettings,
     },
     {
       title: "About",
-      url: "#",
+      url: "/#/about",
       icon: IconHelp,
     },
   ],

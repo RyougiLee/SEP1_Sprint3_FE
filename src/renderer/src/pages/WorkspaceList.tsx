@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {CourseList} from "@/components/features/CourseList";
 import {useSidebarData} from "@/hooks/useSidebarData";
 import {useAuth} from "@/hooks/useAuth";
-import {useUserStore} from "@/store";
+import {useTitleStore, useUserStore} from "@/store";
 import {useMyCourses} from "@/hooks/useMyCourses";
 import {useSearchParams} from "react-router-dom";
 import {CreatedCourseList} from "@/components/features/CreatedCourseList";
@@ -18,6 +18,12 @@ export function WorkspaceList() {
   const mode = searchParams.get("type") || "enrolled";
 
   const {user} = useAuth();
+
+  const setTitle = useTitleStore((state) => state.setTitle);
+  useEffect(() => {
+    setTitle("Workspaces");
+  }, [setTitle]);
+
   const userDetail = useUserStore(state => state.user)
   const{ data: courses, isLoading : coursesLoading} = useMyCourses(user?.id);
   const{ data: coursesCreated, isLoading : coursesCreatedLoading} = useGetCoursesCreated(user?.id);
