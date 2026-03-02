@@ -23,7 +23,9 @@ export function AssignmentListPage() {
   if(userDetail.role === "TEACHER"){
     return (
         <div>
-          <CreateAssignmentDialog courseId={courseId!} refetch={refetch} />
+          <div className="flex justify-end">
+            <CreateAssignmentDialog courseId={courseId!} refetch={refetch} />
+          </div>
           <TeacherAssignmentList assignments={assignments} refetch={refetch} isLoading={isLoading} />
         </div>
         )}

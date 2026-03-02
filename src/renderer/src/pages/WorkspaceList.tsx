@@ -38,7 +38,7 @@ export function WorkspaceList() {
   return (
       <div className="container py-2">
         {mode === "created" ? (
-            <div className=" flex items-center justify-end px-20">
+            <div className=" flex items-center justify-end px-4">
               <CreateCourseDialog onCreate={handleCreate} />
             </div>
         ) : (

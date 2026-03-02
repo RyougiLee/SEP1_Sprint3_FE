@@ -14,6 +14,7 @@ import {LoginForm} from "@/components/features/LoginForm";
 import {SignupForm} from "@/components/features/SignupForm";
 import {WorkspaceList} from "@/pages/WorkspaceList";
 import {AssignmentListPage} from "@/pages/WorkspaceDetail/Assignments/AssignmentListPage";
+import {CourseManagementPage} from "@/pages/WorkspaceDetail/Management";
 
 const App = () => {
 
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/workspaces/:courseId" element={<WorkspaceLayout />}>
               <Route index element={<WorkspaceOverview />} />
               <Route path="assignments" element={<AssignmentListPage />} />
+              <Route path="management" element={<CourseManagementPage />} />
               {/*<Route path="members" element={<MemberList />} />*/}
               <Route path="assignments/:assignmentId" element={<AssignmentDetail />} />
             </Route>
